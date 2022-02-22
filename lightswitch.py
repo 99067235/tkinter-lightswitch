@@ -1,13 +1,27 @@
 import tkinter as tk
+
 window = tk.Tk()
 
-button = tk.Button(text='...', bg="white", fg="black")
-button.pack(pady = 20, padx = 20)
-
-# schijf hier tussen je code
-
 
 
 # schijf hier tussen je code
+window.configure(bg="black")
+
+def input():
+    if(button['text']=='light is off'):
+        button.config(text="light is on")
+        window.configure(bg="yellow")
+        print("light is off")
+    else:
+        button.config(text="light is off")
+        window.configure(bg="black")
+        print("light is on")
+
+
+
+# schijf hier tussen je code
+
+button = tk.Button(text='light is off', bg="white", fg="black", command= input)
+button.pack(pady = 100, padx = 100)
 
 window.mainloop()
